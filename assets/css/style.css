@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@import url(./variabel.css);
+* {
+  font-family: "Outfit", sans-serif;
+}
+.bg-navy {
+  background-color: var(--navy) !important;
+}
+section#home img {
+  max-height: 100vh;
+  min-height: 80vh;
+  animation: zoom 100s linear infinite;
+}
+
+section#home .carousel {
+  position: relative;
+}
+section#home .carousel .container > div {
+  width: 50%;
+}
+
+section#home .carousel .text-home {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  color: white;
+}
+
+section#home .carousel-inner {
+  position: relative;
+  overflow: hidden;
+}
+section#home .carousel-inner::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  z-index: 2;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+}
+.navbar {
+  transition: background 1s ease;
+}
+.navbar a:hover,
+.navbar a:active,
+.navbar a.active {
+  font-weight: bold;
+  color: yellow !important;
+}
+.navbar a.dropdown-item:hover,
+.navbar a.dropdown-item:active {
+  color: yellow !important;
+  background-color: transparent !important;
+}
+
+section#choose-us {
+  /* background-image: url(../waresix/waresix-truck.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh + 50vmin);
+}
+section#choose-us .container {
+  position: relative;
+  z-index: 2;
+}
+section#choose-us::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+
+  inset: 0;
+  background-image: url(../waresix/waresix-truck.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: scale(1.5);
+}
+section#choose-us .space-bottom {
+  margin-bottom: 5rem;
+}
+
+section#counter {
+  position: relative;
+  background-image: url(../waresix/counter-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+section#counter::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+section#counter .container {
+  padding: 5rem 0;
+}
+section#counter .container .item {
+  position: relative;
+  z-index: 3;
+}
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(4);
+  }
+}
+@media (min-width: 1450px) {
+  section#choose-us {
+    min-height: calc(100vh + 10vmin);
+  }
+  section#choose-us::after {
+    transform: scale(1) !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  section#home .carousel .container > div {
+    width: 60%;
+  }
+}
+@media (max-width: 995px) {
+  section#choose-us::after {
+    content: none !important;
+  }
+  section#home .carousel .container > div {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  section#home .carousel .container > div {
+    width: 100%;
+  }
+}

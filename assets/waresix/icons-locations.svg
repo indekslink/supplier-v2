@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__icons_locations_grey" width="60" height="60" data-name="icons locations grey" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#fff}
+        </style>
+    </defs>
+    <path id="prefix__Path_140" d="M0 0v60h60V0zm56.25 56.25H3.75V3.75h52.5z" data-name="Path 140" style="fill:none"/>
+    <path id="prefix__Path_141" d="M24.726 6.75a15 15 0 0 1 15 15 14.756 14.756 0 0 1-3.226 9.244L24.726 45.731 12.951 30.956a14.756 14.756 0 0 1-3.225-9.206 15 15 0 0 1 15-15m0-3.75a18.75 18.75 0 0 0-14.719 30.3l14.719 18.45L39.445 33.3A18.75 18.75 0 0 0 24.726 3z" class="prefix__cls-2" data-name="Path 141" transform="translate(5.274 2.625)"/>
+    <path id="prefix__Path_142" d="M20.375 11.75a5.625 5.625 0 1 1-5.625 5.625 5.625 5.625 0 0 1 5.625-5.625m0-3.75a9.375 9.375 0 1 0 9.375 9.375A9.375 9.375 0 0 0 20.375 8z" class="prefix__cls-2" data-name="Path 142" transform="translate(9.625 7)"/>
+</svg>
