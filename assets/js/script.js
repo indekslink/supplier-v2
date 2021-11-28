@@ -29,7 +29,7 @@ function convert(val) {
 
 const counters = document.querySelectorAll(".value");
 function runAnimate() {
-  const speed = 1000;
+  const speed = 200;
   counters.forEach((counter) => {
     const animate = () => {
       const value = +counter.getAttribute("akhi");
@@ -40,7 +40,10 @@ function runAnimate() {
         counter.innerText = Math.ceil(data + time);
         setTimeout(animate, 1);
       } else {
-        counter.innerText = convert(value);
+        counter.innerText = value;
+        setTimeout(() => {
+          counter.innerText = convert(value);
+        }, 50);
       }
     };
 
@@ -52,7 +55,7 @@ function resetCounters() {
 }
 
 const sectionCounter = document.querySelector("section#counter");
-// let init = true;
+let init = true;
 function initAnimate(scroll) {
   let offsetTop =
     sectionCounter.offsetTop - Math.ceil(window.innerHeight / 2) - 50;
@@ -60,8 +63,12 @@ function initAnimate(scroll) {
   let height = offsetTop + sectionCounter.clientHeight;
 
   if (scroll > offsetTop) {
-    runAnimate();
+    if (init) {
+      runAnimate();
+      init = false;
+    }
   } else {
     resetCounters();
+    init = true;
   }
 }

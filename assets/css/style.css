@@ -3,6 +3,9 @@
 * {
   font-family: "Outfit", sans-serif;
 }
+body {
+  scroll-behavior: smooth;
+}
 .bg-navy {
   background-color: var(--navy) !important;
 }
@@ -54,7 +57,12 @@ section#home .carousel-inner::after {
   color: yellow !important;
   background-color: transparent !important;
 }
-
+#contact .full {
+  height: calc(100% - 36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 section#choose-us {
   /* background-image: url(../waresix/waresix-truck.jpg);
   background-repeat: no-repeat;
