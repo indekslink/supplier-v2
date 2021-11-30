@@ -72,3 +72,78 @@ function initAnimate(scroll) {
     init = true;
   }
 }
+// $(".owl-carousel").owlCarousel({
+//   items: 5,
+//   loop: true,
+//   margin: 20,
+//   direction: "rtl",
+//   autoplay: true,
+//   autoplayTimeout: 3000,
+
+//   responsive: {
+//     0: {
+//       items: 2,
+//     },
+
+//     569: {
+//       items: 3,
+//     },
+
+//     768: {
+//       items: 5,
+//     },
+//   },
+// });
+
+$(".owl-carousel.client").owlCarousel({
+  items: 5,
+  loop: true,
+  margin: 20,
+  rtl: true,
+
+  autoplay: true,
+  center: true,
+  autoPlayTimeout: 100,
+  autoplaySpeed: 10000,
+
+  responsive: {
+    0: {
+      items: 2,
+    },
+
+    569: {
+      items: 3,
+    },
+
+    768: {
+      items: 5,
+    },
+  },
+});
+$(".owl-carousel.product-service").owlCarousel({
+  items: 5,
+  loop: true,
+  margin: 20,
+  stagePadding: 50,
+  center: true,
+  autoplay: true,
+  autoPlayTimeout: 100,
+  autoplaySpeed: 10000,
+
+  responsive: {
+    0: {
+      items: 1,
+    },
+
+    569: {
+      items: 3,
+    },
+
+    961: {
+      items: 4,
+    },
+    1400: {
+      items: 5,
+    },
+  },
+});

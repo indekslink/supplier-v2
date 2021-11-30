@@ -17,6 +17,16 @@
       crossorigin="anonymous"
     />
 
+    <!-- owl carousel -->
+    <link
+      rel="stylesheet"
+      href="./assets/owl-carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/owl-carousel/dist/assets/owl.theme.default.min.css"
+    />
+
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -26,7 +36,7 @@
     <title>Supplier Exportir</title>
   </head>
   <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
       <div class="container">
         <a class="navbar-brand" href="#" style="pointer-events: none">
           <div class="text-logo fs-2 lh-1 fw-bold">
@@ -70,6 +80,11 @@
                 class="dropdown-menu bg-navy border-0"
                 aria-labelledby="se-dropdown"
               >
+                <div
+                  class="text-uppercase text-muted fw-bold text-small ps-2 my-1"
+                >
+                  Product
+                </div>
                 <li>
                   <a class="dropdown-item text-light" href="#"
                     >Semi Husked Coconut</a
@@ -99,6 +114,11 @@
                 <li>
                   <a class="dropdown-item text-light" href="#">Betel Nut</a>
                 </li>
+                <div
+                  class="text-uppercase text-muted fw-bold text-small ps-2 my-1"
+                >
+                  Service
+                </div>
                 <li>
                   <a class="dropdown-item text-light" href="#">Trucking</a>
                 </li>
@@ -167,7 +187,7 @@
 
     <section id="about" class="my-4 py-4">
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-lg-7">
             <div class="fw-bold display-4 lh-sm">
               We connect shippers and businesses with available Warehouses and
@@ -305,6 +325,44 @@
         </div>
       </div>
     </section>
+    <section class="mb-5 pb-4" id="clients">
+      <div class="container">
+        <div class="fw-bold display-4 lh-sm mb-5 text-center">Our Clients</div>
+        <div class="owl-carousel client">
+          <img
+            src="./assets/waresix/clients/logo-1.svg"
+            alt="logo-client"
+          /><img
+            src="./assets/waresix/clients/logo-2.svg"
+            alt="logo-client"
+          /><img
+            src="./assets/waresix/clients/logo-3.svg"
+            alt="logo-client"
+          /><img
+            src="./assets/waresix/clients/logo-4.svg"
+            alt="logo-client"
+          /><img
+            src="./assets/waresix/clients/logo-5.svg"
+            alt="logo-client"
+          /><img
+            src="./assets/waresix/clients/logo-6.svg"
+            alt="logo-client"
+          /><img
+            src="./assets/waresix/clients/logo-7.svg"
+            alt="logo-client"
+          /><img
+            src="./assets/waresix/clients/logo-8.svg"
+            alt="logo-client"
+          /><img
+            src="./assets/waresix/clients/logo-9.svg"
+            alt="logo-client"
+          /><img
+            src="./assets/waresix/clients/logo-10.svg"
+            alt="logo-client"
+          /><img src="./assets/waresix/clients/logo-11.svg" alt="logo-client" />
+        </div>
+      </div>
+    </section>
     <section class="my-4 overflow-hidden py-4" id="counter">
       <div class="container text-light">
         <div class="row justify-content-between">
@@ -356,12 +414,103 @@
         </div>
       </div>
     </section>
+
+    <seciton class="my-4 py-4">
+      <div class="container">
+        <div class="fw-bold display-5 lh-sm mb-4">
+          Our Products and Services
+        </div>
+        <div class="owl-carousel product-service text-center">
+          <div class="card bg-transparent border-0">
+            <img
+              src="./assets/images/coco-2.jpeg"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-1">
+              <div class="fs-5 lh-sm">Semi Husked Coconut</div>
+            </div>
+          </div>
+          <div class="card bg-transparent border-0">
+            <img src="./assets/images/8.jpeg" alt="" class="card-img-top" />
+            <div class="card-body px-1">
+              <div class="fs-5 lh-sm">Dessicated Coconut</div>
+            </div>
+          </div>
+          <div class="card bg-transparent border-0">
+            <img
+              src="./assets/images/palm(3).jpeg"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-1">
+              <div class="fs-5 lh-sm">Coconut Palm Sugar</div>
+            </div>
+          </div>
+          <div class="card bg-transparent border-0">
+            <img src="./assets/images/10.jpeg" alt="" class="card-img-top" />
+            <div class="card-body px-1">
+              <div class="fs-5 lh-sm">Dragon Fruit</div>
+            </div>
+          </div>
+          <div class="card bg-transparent border-0">
+            <img
+              src="./assets/images/kopi-2.jpeg"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-1">
+              <div class="fs-5 lh-sm">Robusta Green Been Coffe</div>
+            </div>
+          </div>
+          <div class="card bg-transparent border-0">
+            <img
+              src="./assets/images/egg(2).jpeg"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-1">
+              <div class="fs-5 lh-sm">Chicken Egg</div>
+            </div>
+          </div>
+          <div class="card bg-transparent border-0">
+            <img
+              src="./assets/images/betel-nut(1).jpeg"
+              alt=""
+              class="card-img-top"
+            />
+            <div class="card-body px-1">
+              <div class="fs-5 lh-sm">Betel Nut</div>
+            </div>
+          </div>
+          <div class="card bg-transparent border-0">
+            <img src="./assets/images/ei-1.jpeg" alt="" class="card-img-top" />
+            <div class="card-body px-1">
+              <div class="fs-5 lh-sm">Trucking</div>
+            </div>
+          </div>
+          <div class="card bg-transparent border-0">
+            <img src="./assets/images/ei-5.jpeg" alt="" class="card-img-top" />
+            <div class="card-body px-1">
+              <div class="fs-5 lh-sm">Export Import Clearance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </seciton>
+    <section class="my-4 py-4">
+      <div class="container">
+        <div class="fw-bold text-md-end text-start display-5 lh-sm mb-4">
+          Our Video Gallery
+        </div>
+      </div>
+    </section>
     <section id="contact" class="mt-4 pt-5 bg-navy overflow-hidden">
       <div class="container text-light">
         <div class="fw-bold display-4 lh-sm mb-5 text-center">Contact Us</div>
         <div class="row g-5 justify-content-lg-between justify-content-center">
-          <div class=" col-lg-4 col-md-5" >
-            <div class="fs-2 mb-3 fw-bold">Head Office</div>
+          <div class="col-lg-4 col-md-5">
+            <div class="fs-3 mb-3 fw-bold">Head Office</div>
             <div class="full">
               <div class="item mb-4">
                 Gandaria 8 Office Tower, #27D Jalan Sultan Iskandar Muda No.10
@@ -371,52 +520,94 @@
               <div class="item mb-4">
                 <div class="fs-4 mb-4 d-flex justify-content-md-between">
                   <i
-                    style="cursor: pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;"
+                    style="
+                      cursor: pointer;
+                      width: 40px;
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
                     class="
-                      fab me-md-0 me-3
+                      fab
+                      me-md-0 me-3
                       fa-whatsapp
                       bg-light
                       text-dark
-                      
                       rounded-circle
                     "
                   ></i>
                   <i
-                    style="cursor: pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;"
+                    style="
+                      cursor: pointer;
+                      width: 40px;
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
                     class="
-                      fab me-md-0 me-3
-                      fa-facebook
+                      fab
+                      me-md-0 me-3
+                      fa-facebook-f
                       bg-light
                       text-dark
-                      
                       rounded-circle
                     "
                   ></i>
                   <i
-                    style="cursor: pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;"
+                    style="
+                      cursor: pointer;
+                      width: 40px;
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
                     class="
-                      fab me-md-0 me-3
+                      fab
+                      me-md-0 me-3
                       fa-instagram
                       bg-light
                       text-dark
-                      
                       rounded-circle
                     "
                   ></i>
                   <i
-                    style="cursor: pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;"
+                    style="
+                      cursor: pointer;
+                      width: 40px;
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
                     class="
-                      fab me-md-0 me-3
+                      fab
+                      me-md-0 me-3
                       fa-linkedin
                       bg-light
                       text-dark
-                      
                       rounded-circle
                     "
                   ></i>
                   <i
-                    style="cursor: pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;"
-                    class="fab me-md-0 me-3 fa-youtube bg-light text-dark  rounded-circle"
+                    style="
+                      cursor: pointer;
+                      width: 40px;
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                    class="
+                      fab
+                      me-md-0 me-3
+                      fa-youtube
+                      bg-light
+                      text-dark
+                      rounded-circle
+                    "
                   ></i>
                 </div>
                 <div>Call center: +62 855-746-77888</div>
@@ -425,8 +616,8 @@
               </div>
             </div>
           </div>
-          <div class=" col-lg-4 col-md-5" >
-            <div class="fs-2 mb-3 fw-bold">Branch Offices</div>
+          <div class="col-lg-4 col-md-5">
+            <div class="fs-3 mb-3 fw-bold">Branch Offices</div>
             <div class="full">
               <div class="item mb-4">
                 <div class="fs-5 mb-2">JAKARTA</div>
@@ -450,49 +641,51 @@
               </div>
             </div>
           </div>
-          <div class=" col-lg-4 col-md-8" >
-            <div class="fs-2 mb-3 fw-bold">Get in Touch!</div>
+          <div class="col-lg-4 col-md-8">
+            <div class="fs-3 mb-3 fw-bold">Get in Touch!</div>
             <div class="full">
-
               <div class="item">
-                  <div class="mb-3">Your email address will not be published.</div> 
-                  <div class="form-floating mb-3">
-                    <input
-                      type="text"
-                      class="form-control bg-transparent text-light"
-                      id="name"
-                      placeholder="name"
-                      autocomplete="off"
-                      required
-                    />
-                    <label for="name">Name</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control bg-transparent text-light"
-                      id="email"
-                      placeholder="email"
-                      autocomplete="off"
-                      required
-                    />
-                    <label for="email">Email</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <div class="form-floating">
-                      <textarea
-                        class="form-control bg-transparent text-light"
-                        placeholder="Leave a comment here"
-                        id="floatingTextarea2"
-                        style="height: 100px"
-                        autocomplete="off"
-                        required
-                      ></textarea>
-                      <label for="floatingTextarea2">Message</label>
-                    </div>
-                  </div>
-                  <button class="btn-warning btn d-block w-100">Send Message</button>
+                <div class="mb-3">
+                  Your email address will not be published.
                 </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control bg-transparent text-light"
+                    id="name"
+                    placeholder="name"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="name">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control bg-transparent text-light"
+                    id="email"
+                    placeholder="email"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="email">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control bg-transparent text-light"
+                      placeholder="Leave a comment here"
+                      id="floatingTextarea2"
+                      style="height: 100px"
+                      autocomplete="off"
+                      required
+                    ></textarea>
+                    <label for="floatingTextarea2">Message</label>
+                  </div>
+                </div>
+                <button class="btn-warning btn d-block w-100">
+                  Send Message
+                </button>
               </div>
             </div>
           </div>
@@ -501,7 +694,11 @@
 
       <div class="pt-5 mt-5 pb-3 text-light">
         <div class="text-center">
-          Supplier-Exportir &copy; <script>document.write(new Date().getFullYear())</script> All Rights Reserved.
+          Supplier-Exportir &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All Rights Reserved.
         </div>
       </div>
     </section>
@@ -513,6 +710,14 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/owl-carousel/dist/owl.carousel.min.js"></script>
 
     <script src="./assets/js/script.js"></script>
   </body>

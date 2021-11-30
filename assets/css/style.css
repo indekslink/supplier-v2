@@ -64,10 +64,6 @@ section#home .carousel-inner::after {
   justify-content: space-between;
 }
 section#choose-us {
-  /* background-image: url(../waresix/waresix-truck.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
   position: relative;
   overflow: hidden;
   min-height: calc(100vh + 50vmin);
@@ -115,6 +111,14 @@ section#counter .container .item {
   position: relative;
   z-index: 3;
 }
+.product-service img.card-img-top {
+  width: 100% !important;
+  height: calc(3vw + 150px) !important;
+  max-width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
 @keyframes zoom {
   from {
     transform: scale(1);
@@ -137,12 +141,15 @@ section#counter .container .item {
     width: 60%;
   }
 }
-@media (max-width: 995px) {
+@media (max-width: 991px) {
   section#choose-us::after {
     content: none !important;
   }
   section#home .carousel .container > div {
     width: 80%;
+  }
+  section#choose-us {
+    min-height: 0 !important;
   }
 }
 @media (max-width: 768px) {
