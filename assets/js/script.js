@@ -107,8 +107,8 @@ slideProductService.children().each(function (index, val) {
 slideProductService.owlCarousel({
   items: 5,
   loop: true,
-  margin: 20,
-  stagePadding: 50,
+  margin: 10,
+  stagePadding: 30,
   center: true,
   autoplay: true,
 
@@ -139,11 +139,12 @@ let itemSlideProductService = document.querySelectorAll(
 );
 itemSlideProductService.forEach((card) => {
   card.addEventListener("click", function () {
-    itemSlideProductService.forEach((e) => e.classList.remove("active"));
-
+    console.log(card);
+    $(itemSlideProductService).removeClass("active");
+    // card.classList.add("active");
     const target = card.getAttribute("data-target");
     const position = card.getAttribute("data-position");
-    slideProductService.trigger("to.owl.carousel", position);
+    // console.log(target);
 
     if (target == oldTarget) {
       if (playAgain) {
@@ -161,5 +162,6 @@ itemSlideProductService.forEach((card) => {
       card.classList.add("active");
     }
     oldTarget = target;
+    slideProductService.trigger("to.owl.carousel", position);
   });
 });
