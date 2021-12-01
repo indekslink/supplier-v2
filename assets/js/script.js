@@ -72,28 +72,6 @@ function initAnimate(scroll) {
     init = true;
   }
 }
-// $(".owl-carousel").owlCarousel({
-//   items: 5,
-//   loop: true,
-//   margin: 20,
-//   direction: "rtl",
-//   autoplay: true,
-//   autoplayTimeout: 3000,
-
-//   responsive: {
-//     0: {
-//       items: 2,
-//     },
-
-//     569: {
-//       items: 3,
-//     },
-
-//     768: {
-//       items: 5,
-//     },
-//   },
-// });
 
 $(".owl-carousel.client").owlCarousel({
   items: 5,
