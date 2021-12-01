@@ -83,6 +83,7 @@ $(".owl-carousel.client").owlCarousel({
   center: true,
   autoPlayTimeout: 100,
   autoplaySpeed: 10000,
+  autoplayHoverPause: false,
 
   responsive: {
     0: {
@@ -98,16 +99,22 @@ $(".owl-carousel.client").owlCarousel({
     },
   },
 });
-$(".owl-carousel.product-service").owlCarousel({
+let slideProductService = $(".owl-carousel.product-service");
+slideProductService.children().each(function (index, val) {
+  $(this).attr("data-position", index); // NB: .attr() instead of .data()
+});
+
+slideProductService.owlCarousel({
   items: 5,
   loop: true,
   margin: 20,
   stagePadding: 50,
   center: true,
   autoplay: true,
+
+  autoplayHoverPause: false,
   autoPlayTimeout: 100,
   autoplaySpeed: 10000,
-
   responsive: {
     0: {
       items: 1,
@@ -124,4 +131,35 @@ $(".owl-carousel.product-service").owlCarousel({
       items: 5,
     },
   },
+});
+let oldTarget;
+let playAgain = true;
+let itemSlideProductService = document.querySelectorAll(
+  ".owl-carousel.product-service .card"
+);
+itemSlideProductService.forEach((card) => {
+  card.addEventListener("click", function () {
+    itemSlideProductService.forEach((e) => e.classList.remove("active"));
+
+    const target = card.getAttribute("data-target");
+    const position = card.getAttribute("data-position");
+    slideProductService.trigger("to.owl.carousel", position);
+
+    if (target == oldTarget) {
+      if (playAgain) {
+        slideProductService.trigger("play.owl.autoplay");
+        playAgain = false;
+        card.classList.remove("active");
+      } else {
+        slideProductService.trigger("stop.owl.autoplay");
+        playAgain = true;
+        card.classList.add("active");
+      }
+    } else {
+      slideProductService.trigger("stop.owl.autoplay");
+      playAgain = true;
+      card.classList.add("active");
+    }
+    oldTarget = target;
+  });
 });

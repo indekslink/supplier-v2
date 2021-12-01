@@ -3,6 +3,9 @@
 * {
   font-family: "Outfit", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .bg-navy {
   background-color: var(--navy) !important;
@@ -115,6 +118,16 @@ section#counter .container .item {
   max-width: 100%;
   border-radius: 5px;
   object-fit: cover;
+}
+.owl-carousel.product-service .card,
+.owl-carousel.product-service .card img {
+  cursor: pointer !important;
+}
+
+.owl-carousel.product-service .card.active {
+  /* background-color: white !important; */
+  /* border: 1px solid rgb(59, 59, 59) !important; */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .skeleton-loader {
   cursor: progress;
