@@ -3,9 +3,7 @@
 * {
   font-family: "Outfit", sans-serif;
 }
-body {
-  scroll-behavior: smooth;
-}
+
 .bg-navy {
   background-color: var(--navy) !important;
 }
@@ -118,7 +116,22 @@ section#counter .container .item {
   border-radius: 5px;
   object-fit: cover;
 }
+.skeleton-loader {
+  cursor: progress;
+  background: linear-gradient(0.25turn, transparent, #fff, transparent),
+    linear-gradient(#eee, #eee);
 
+  background-repeat: no-repeat;
+  /* background-size: 315px 250px, 315px 180px, 100px 100px, 225px 30px; */
+  background-position: -315px 0, 0 0, 0px 190px, 50px 195px;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+  }
+}
 @keyframes zoom {
   from {
     transform: scale(1);

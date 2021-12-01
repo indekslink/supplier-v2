@@ -114,11 +114,11 @@ $(".owl-carousel.product-service").owlCarousel({
     },
 
     569: {
-      items: 3,
+      items: 2,
     },
 
     961: {
-      items: 4,
+      items: 3,
     },
     1400: {
       items: 5,

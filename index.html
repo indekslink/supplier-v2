@@ -8,7 +8,7 @@
       name="description"
       content="Supplier - Exportir , The Leading Supplier Exporter Of Indonesian Agriculture Commodities"
     />
-
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -145,6 +145,7 @@
           <button
             class="btn btn-success ms-lg-5 ms-0 text-truncate"
             type="button"
+            onclick='window.open("https://api.whatsapp.com/send?phone=6282152519079","_blank")'
           >
             <i class="fab fa-whatsapp"></i> Whatsapp Us
           </button>
@@ -332,34 +333,48 @@
           <img
             src="./assets/waresix/clients/logo-1.svg"
             alt="logo-client"
+            class="lazyload"
           /><img
             src="./assets/waresix/clients/logo-2.svg"
             alt="logo-client"
+            class="lazyload"
           /><img
             src="./assets/waresix/clients/logo-3.svg"
             alt="logo-client"
+            class="lazyload"
           /><img
             src="./assets/waresix/clients/logo-4.svg"
             alt="logo-client"
+            class="lazyload"
           /><img
             src="./assets/waresix/clients/logo-5.svg"
             alt="logo-client"
+            class="lazyload"
           /><img
             src="./assets/waresix/clients/logo-6.svg"
             alt="logo-client"
+            class="lazyload"
           /><img
             src="./assets/waresix/clients/logo-7.svg"
             alt="logo-client"
+            class="lazyload"
           /><img
             src="./assets/waresix/clients/logo-8.svg"
             alt="logo-client"
+            class="lazyload"
           /><img
             src="./assets/waresix/clients/logo-9.svg"
             alt="logo-client"
+            class="lazyload"
           /><img
             src="./assets/waresix/clients/logo-10.svg"
             alt="logo-client"
-          /><img src="./assets/waresix/clients/logo-11.svg" alt="logo-client" />
+            class="lazyload"
+          /><img
+            src="./assets/waresix/clients/logo-11.svg"
+            alt="logo-client"
+            class="lazyload"
+          />
         </div>
       </div>
     </section>
@@ -425,14 +440,18 @@
             <img
               src="./assets/images/coco-2.jpeg"
               alt=""
-              class="card-img-top"
+              class="card-img-top lazyload skeleton-loader"
             />
             <div class="card-body px-1">
               <div class="fs-5 lh-sm">Semi Husked Coconut</div>
             </div>
           </div>
           <div class="card bg-transparent border-0">
-            <img src="./assets/images/8.jpeg" alt="" class="card-img-top" />
+            <img
+              src="./assets/images/8.jpeg"
+              alt=""
+              class="card-img-top lazyload skeleton-loader"
+            />
             <div class="card-body px-1">
               <div class="fs-5 lh-sm">Dessicated Coconut</div>
             </div>
@@ -441,14 +460,18 @@
             <img
               src="./assets/images/palm(3).jpeg"
               alt=""
-              class="card-img-top"
+              class="card-img-top lazyload skeleton-loader"
             />
             <div class="card-body px-1">
               <div class="fs-5 lh-sm">Coconut Palm Sugar</div>
             </div>
           </div>
           <div class="card bg-transparent border-0">
-            <img src="./assets/images/10.jpeg" alt="" class="card-img-top" />
+            <img
+              src="./assets/images/10.jpeg"
+              alt=""
+              class="card-img-top lazyload skeleton-loader"
+            />
             <div class="card-body px-1">
               <div class="fs-5 lh-sm">Dragon Fruit</div>
             </div>
@@ -457,7 +480,7 @@
             <img
               src="./assets/images/kopi-2.jpeg"
               alt=""
-              class="card-img-top"
+              class="card-img-top lazyload skeleton-loader"
             />
             <div class="card-body px-1">
               <div class="fs-5 lh-sm">Robusta Green Been Coffe</div>
@@ -467,7 +490,7 @@
             <img
               src="./assets/images/egg(2).jpeg"
               alt=""
-              class="card-img-top"
+              class="card-img-top lazyload skeleton-loader"
             />
             <div class="card-body px-1">
               <div class="fs-5 lh-sm">Chicken Egg</div>
@@ -477,20 +500,28 @@
             <img
               src="./assets/images/betel-nut(1).jpeg"
               alt=""
-              class="card-img-top"
+              class="card-img-top lazyload skeleton-loader"
             />
             <div class="card-body px-1">
               <div class="fs-5 lh-sm">Betel Nut</div>
             </div>
           </div>
           <div class="card bg-transparent border-0">
-            <img src="./assets/images/ei-1.jpeg" alt="" class="card-img-top" />
+            <img
+              src="./assets/images/ei-1.jpeg"
+              alt=""
+              class="card-img-top lazyload skeleton-loader"
+            />
             <div class="card-body px-1">
               <div class="fs-5 lh-sm">Trucking</div>
             </div>
           </div>
           <div class="card bg-transparent border-0">
-            <img src="./assets/images/ei-5.jpeg" alt="" class="card-img-top" />
+            <img
+              src="./assets/images/ei-5.jpeg"
+              alt=""
+              class="card-img-top lazyload skeleton-loader"
+            />
             <div class="card-body px-1">
               <div class="fs-5 lh-sm">Export Import Clearance</div>
             </div>
@@ -498,10 +529,44 @@
         </div>
       </div>
     </seciton>
-    <section class="my-4 py-4">
+    <section class="my-4 py-4" id="video-gallery">
       <div class="container">
         <div class="fw-bold text-md-end text-start display-5 lh-sm mb-4">
           Our Video Gallery
+        </div>
+        <div class="row gy-3 justify-content-center">
+          <div class="col-lg-4 col-md-5 col-sm-6">
+            <iframe
+              src="https://www.youtube.com/embed/-fDZbkdKvSw?controls=0"
+              frameborder="0"
+              class="w-100 skeleton-loader rounded-3"
+              style="min-height: calc(50vh - 10vmin)"
+            ></iframe>
+          </div>
+          <div class="col-lg-4 col-md-5 col-sm-6">
+            <iframe
+              src="https://www.youtube.com/embed/8y0s_qh_wmI?controls=0"
+              frameborder="0"
+              class="w-100 skeleton-loader rounded-3"
+              style="min-height: calc(50vh - 10vmin)"
+            ></iframe>
+          </div>
+          <div class="col-lg-4 col-md-5 col-sm-6">
+            <iframe
+              src="https://www.youtube.com/embed/IlMUgEiiuVI?controls=0"
+              frameborder="0"
+              class="w-100 skeleton-loader rounded-3"
+              style="min-height: calc(50vh - 10vmin)"
+            ></iframe>
+          </div>
+          <div class="col-lg-4 col-md-5 col-sm-6">
+            <iframe
+              src="https://www.youtube.com/embed/77a3uG5jOLs?controls=0"
+              frameborder="0"
+              class="w-100 skeleton-loader rounded-3"
+              style="min-height: calc(50vh - 10vmin)"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -702,14 +767,17 @@
         </div>
       </div>
     </section>
-    <!-- Optional JavaScript; choose one of the two! -->
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script>
+      let lazy = document.querySelectorAll(".lazyload");
+      lazyload(lazy);
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- jquery -->
     <script
