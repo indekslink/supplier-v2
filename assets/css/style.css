@@ -124,6 +124,39 @@ section#counter .container .item {
   cursor: pointer !important;
 }
 
+.owl-carousel.product-service .owl-item > div {
+  cursor: pointer;
+
+  transition: none;
+}
+.owl-carousel.product-service .collapse {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.owl-carousel.product-service .my-grid img {
+  transition: 0.5s;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.owl-carousel.product-service .card.item .this-title {
+  transition: all 0.5s linear;
+  position: relative;
+  z-index: 3;
+}
+.owl-carousel.product-service .card.item.active .this-title {
+  transform: translateY(9px);
+  margin: 0 5px;
+}
+.owl-carousel.product-service .owl-item.center > div {
+  cursor: auto;
+  margin: 0;
+}
+
 .owl-carousel.product-service .card.active {
   /* background-color: white !important; */
   /* border: 1px solid rgb(59, 59, 59) !important; */

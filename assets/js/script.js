@@ -110,11 +110,11 @@ slideProductService.owlCarousel({
   margin: 10,
   stagePadding: 30,
   center: true,
-  autoplay: true,
+  // autoplay: true,
 
-  autoplayHoverPause: false,
-  autoPlayTimeout: 100,
-  autoplaySpeed: 10000,
+  // autoplayHoverPause: false,
+  // autoPlayTimeout: 100,
+  // autoplaySpeed: 10000,
   responsive: {
     0: {
       items: 1,
@@ -135,33 +135,53 @@ slideProductService.owlCarousel({
 let oldTarget;
 let playAgain = true;
 let itemSlideProductService = document.querySelectorAll(
-  ".owl-carousel.product-service .card"
+  ".owl-carousel.product-service .card:not(.card-collapse)"
 );
 itemSlideProductService.forEach((card) => {
   card.addEventListener("click", function () {
-    console.log(card);
-    $(itemSlideProductService).removeClass("active");
-    // card.classList.add("active");
     const target = card.getAttribute("data-target");
+    const idCollapse = card.getAttribute("data-bs-target");
     const position = card.getAttribute("data-position");
-    // console.log(target);
+
+    $(itemSlideProductService).removeClass("active");
 
     if (target == oldTarget) {
       if (playAgain) {
-        slideProductService.trigger("play.owl.autoplay");
         playAgain = false;
         card.classList.remove("active");
       } else {
-        slideProductService.trigger("stop.owl.autoplay");
         playAgain = true;
         card.classList.add("active");
       }
     } else {
-      slideProductService.trigger("stop.owl.autoplay");
       playAgain = true;
       card.classList.add("active");
     }
     oldTarget = target;
+
     slideProductService.trigger("to.owl.carousel", position);
+    collapseDescription(idCollapse);
+    setTimeout(() => {
+      fitSizeImg();
+    }, 500);
   });
 });
+function collapseDescription(id) {
+  let collapseElementList = [].slice.call(
+    document.querySelectorAll(`.collapse-description:not(${id})`)
+  );
+  collapseElementList.map(function (collapseEl) {
+    let e = bootstrap.Collapse.getInstance(collapseEl);
+    if (e) {
+      e.hide();
+    }
+  });
+}
+function fitSizeImg() {
+  const imgGridCollapseDescription = document.querySelectorAll(".my-grid img");
+  imgGridCollapseDescription.forEach((e) => {
+    e.style.width = "100%";
+
+    e.style.height = e.offsetWidth + "px";
+  });
+}
