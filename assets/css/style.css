@@ -139,7 +139,7 @@ section#counter .container .item {
 }
 
 .owl-carousel.product-service .my-grid img {
-  transition: 0.5s;
+  /* transition: 0.5s; */
   object-fit: cover;
   border-radius: 5px;
 }

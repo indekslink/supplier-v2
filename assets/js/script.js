@@ -115,6 +115,7 @@ slideProductService.owlCarousel({
   margin: 10,
   stagePadding: 30,
   center: true,
+  responsiveRefreshRate: 10,
   // autoplay: true,
 
   // autoplayHoverPause: false,
@@ -148,7 +149,8 @@ itemSlideProductService.forEach((card) => {
     const idCollapse = card.getAttribute("data-bs-target");
     const position = card.getAttribute("data-position");
 
-   // $(itemSlideProductService).removeClass("active").addClass("text-truncate");
+    //  $(itemSlideProductService).removeClass("active").addClass("text-truncate");
+    $(itemSlideProductService).addClass("text-truncate");
 
     collapseDescription(idCollapse);
     setTimeout(() => {
@@ -161,7 +163,7 @@ itemSlideProductService.forEach((card) => {
         card.classList.add("text-truncate");
       } else {
         playAgain = true;
-       // card.classList.add("active");
+        // card.classList.add("active");
         card.classList.remove("text-truncate");
       }
     } else {
