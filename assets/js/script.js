@@ -1,5 +1,8 @@
 let Wscroll, Wwidth;
 const navBar = document.querySelector("nav.navbar");
+
+const parentLoading = document.querySelector(".parent-loading");
+
 window.onscroll = function () {
   Wscroll = window.scrollY;
   if (Wwidth > 964) {
@@ -7,6 +10,7 @@ window.onscroll = function () {
     navBar.classList.add(Wscroll > 50 ? "bg-navy" : "bg-transparent");
   }
   initAnimate(Wscroll);
+  activeSectionScroll(Wscroll);
 };
 window.onresize = function () {
   Wwidth = window.innerWidth;
@@ -15,6 +19,7 @@ window.onresize = function () {
 };
 window.onload = function () {
   Wwidth = window.innerWidth;
+  parentLoading.classList.add("close");
   navBar.classList.remove("bg-transparent", "bg-navy");
   navBar.classList.add(Wwidth < 965 ? "bg-navy" : "bg-transparent");
 };
@@ -143,27 +148,30 @@ itemSlideProductService.forEach((card) => {
     const idCollapse = card.getAttribute("data-bs-target");
     const position = card.getAttribute("data-position");
 
-    $(itemSlideProductService).removeClass("active");
+    $(itemSlideProductService).removeClass("active").addClass("text-truncate");
 
-    if (target == oldTarget) {
-      if (playAgain) {
-        playAgain = false;
-        card.classList.remove("active");
-      } else {
-        playAgain = true;
-        card.classList.add("active");
-      }
-    } else {
-      playAgain = true;
-      card.classList.add("active");
-    }
-    oldTarget = target;
-
-    slideProductService.trigger("to.owl.carousel", position);
     collapseDescription(idCollapse);
     setTimeout(() => {
       fitSizeImg();
     }, 500);
+    if (target == oldTarget) {
+      if (playAgain) {
+        playAgain = false;
+        card.classList.remove("active");
+        card.classList.add("text-truncate");
+      } else {
+        playAgain = true;
+        card.classList.add("active");
+        card.classList.remove("text-truncate");
+      }
+    } else {
+      playAgain = true;
+      card.classList.add("active");
+      card.classList.remove("text-truncate");
+    }
+    oldTarget = target;
+
+    slideProductService.trigger("to.owl.carousel", position);
   });
 });
 function collapseDescription(id) {
@@ -183,5 +191,22 @@ function fitSizeImg() {
     e.style.width = "100%";
 
     e.style.height = e.offsetWidth + "px";
+  });
+}
+
+// const sectionScroll = document.querySelectorAll(".section-scroll");
+const menuDataLink = document.querySelectorAll(`.navbar a.nav-link`);
+function activeSectionScroll(scroll) {
+  menuDataLink.forEach((link) => {
+    let href = link.getAttribute("href");
+    let section = document.querySelector(`div[data-link="${href}"]`);
+
+    let offsetTop = section.offsetTop;
+    let height = offsetTop + section.clientHeight;
+    if (scroll > offsetTop - 100 && scroll < height - 100) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
   });
 }
