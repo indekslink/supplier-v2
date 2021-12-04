@@ -148,7 +148,7 @@ itemSlideProductService.forEach((card) => {
     const idCollapse = card.getAttribute("data-bs-target");
     const position = card.getAttribute("data-position");
 
-    $(itemSlideProductService).removeClass("active").addClass("text-truncate");
+   // $(itemSlideProductService).removeClass("active").addClass("text-truncate");
 
     collapseDescription(idCollapse);
     setTimeout(() => {
@@ -157,16 +157,16 @@ itemSlideProductService.forEach((card) => {
     if (target == oldTarget) {
       if (playAgain) {
         playAgain = false;
-        card.classList.remove("active");
+        //card.classList.remove("active");
         card.classList.add("text-truncate");
       } else {
         playAgain = true;
-        card.classList.add("active");
+       // card.classList.add("active");
         card.classList.remove("text-truncate");
       }
     } else {
       playAgain = true;
-      card.classList.add("active");
+      //card.classList.add("active");
       card.classList.remove("text-truncate");
     }
     oldTarget = target;
