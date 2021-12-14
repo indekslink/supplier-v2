@@ -1,7 +1,7 @@
 let Wscroll, Wwidth;
 const navBar = document.querySelector("nav.navbar");
 
-const parentLoading = document.querySelector(".parent-loading");
+// const parentLoading = document.querySelector(".parent-loading");
 
 window.onscroll = function () {
   Wscroll = window.scrollY;
@@ -19,7 +19,7 @@ window.onresize = function () {
 };
 window.onload = function () {
   Wwidth = window.innerWidth;
-  parentLoading.classList.add("close");
+  // parentLoading.classList.add("close");
   navBar.classList.remove("bg-transparent", "bg-navy");
   navBar.classList.add(Wwidth < 965 ? "bg-navy" : "bg-transparent");
 };
@@ -212,3 +212,9 @@ function activeSectionScroll(scroll) {
     }
   });
 }
+
+menuDataLink.forEach((md) => {
+  if (!md.hasAttribute("data-bs-toggle")) {
+    console.log(md);
+  }
+});
