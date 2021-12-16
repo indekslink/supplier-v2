@@ -176,7 +176,7 @@ itemSlideProductService.forEach((card) => {
     slideProductService.trigger("to.owl.carousel", position);
   });
 });
-function collapseDescription(id) {
+function collapseDescription(id, show = false) {
   let collapseElementList = [].slice.call(
     document.querySelectorAll(`.collapse-description:not(${id})`)
   );
@@ -184,6 +184,11 @@ function collapseDescription(id) {
     let e = bootstrap.Collapse.getInstance(collapseEl);
     if (e) {
       e.hide();
+      // if (show) {
+      //   const v = document.querySelector(`.collapse-description${id}`);
+      //   const vbs = bootstrap.Collapse.getInstance(v);
+      //   vbs.show();
+      // }
     }
   });
 }
@@ -205,7 +210,7 @@ function activeSectionScroll(scroll) {
 
     let offsetTop = section.offsetTop;
     let height = offsetTop + section.clientHeight;
-    if (scroll > offsetTop - 100 && scroll < height - 100) {
+    if (scroll > offsetTop - 120 && scroll < height - 100) {
       link.classList.add("active");
     } else {
       link.classList.remove("active");
@@ -215,6 +220,42 @@ function activeSectionScroll(scroll) {
 
 menuDataLink.forEach((md) => {
   if (!md.hasAttribute("data-bs-toggle")) {
-    console.log(md);
+    md.addEventListener("click", function (e) {
+      e.preventDefault();
+      let section = document.querySelector(
+        `div[data-link="${md.getAttribute("href")}"]`
+      );
+      let offsetTop = section.offsetTop;
+      window.scrollTo(0, offsetTop - 80);
+    });
+  } else {
+    const itemDropdown = Array.from(md.nextElementSibling.children);
+    itemDropdown.forEach((element) => {
+      if (element.tagName == "LI") {
+        let itemLink = element.children[0];
+        itemLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          const href = itemLink.getAttribute("href");
+          const parentCollapse = document.querySelector(
+            `.owl-carousel [data-bs-target="${href}"]`
+          );
+          const section = document.querySelector(
+            `.section-scroll[data-link="#supplier-exportir"]`
+          );
+
+          collapseDescription(href);
+          setTimeout(() => {
+            fitSizeImg();
+          }, 500);
+
+          slideProductService.trigger(
+            "to.owl.carousel",
+            parentCollapse.getAttribute("data-position")
+          );
+
+          window.scrollTo(0, section.offsetTop - 80);
+        });
+      }
+    });
   }
 });
