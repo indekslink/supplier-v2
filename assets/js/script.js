@@ -22,6 +22,7 @@ window.onload = function () {
   // parentLoading.classList.add("close");
   navBar.classList.remove("bg-transparent", "bg-navy");
   navBar.classList.add(Wwidth < 965 ? "bg-navy" : "bg-transparent");
+  window.scrollTo(0, 0);
 };
 
 function convert(val) {
@@ -226,7 +227,7 @@ menuDataLink.forEach((md) => {
         `div[data-link="${md.getAttribute("href")}"]`
       );
       let offsetTop = section.offsetTop;
-      window.scrollTo(0, offsetTop - 80);
+      window.scrollTo(0, offsetTop - 70);
     });
   } else {
     const itemDropdown = Array.from(md.nextElementSibling.children);
@@ -253,7 +254,7 @@ menuDataLink.forEach((md) => {
             parentCollapse.getAttribute("data-position")
           );
 
-          window.scrollTo(0, section.offsetTop - 80);
+          window.scrollTo(0, section.offsetTop - 70);
         });
       }
     });
