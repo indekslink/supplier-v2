@@ -260,3 +260,8 @@ menuDataLink.forEach((md) => {
     });
   }
 });
+
+function learnmore(){
+    const about = document.querySelector('.section-scroll[data-link="#about"')
+    window.scrollTo(0, about.offsetTop - 70);
+}
