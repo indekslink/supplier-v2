@@ -228,6 +228,7 @@ menuDataLink.forEach((md) => {
       );
       let offsetTop = section.offsetTop;
       window.scrollTo(0, offsetTop - 70);
+      closeNavbar();
     });
   } else {
     const itemDropdown = Array.from(md.nextElementSibling.children);
@@ -255,13 +256,19 @@ menuDataLink.forEach((md) => {
           );
 
           window.scrollTo(0, section.offsetTop - 70);
+          closeNavbar();
         });
       }
     });
   }
 });
 
-function learnmore(){
-    const about = document.querySelector('.section-scroll[data-link="#about"')
-    window.scrollTo(0, about.offsetTop - 70);
+function learnmore() {
+  const about = document.querySelector('.section-scroll[data-link="#about"');
+  window.scrollTo(0, about.offsetTop - 70);
+}
+function closeNavbar() {
+  const collapseNavbar = document.querySelector("#navbarSupportedContent");
+  let e = bootstrap.Collapse.getInstance(collapseNavbar);
+  e.hide();
 }
